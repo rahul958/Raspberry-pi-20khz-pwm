@@ -44,7 +44,7 @@ int file_write(char location[], unsigned int value){                            
         fclose(fptr);
         return 0;
 }
-int chnage_dutycycle(int rxd_duty_cycle){
+int change_dutycycle(int rxd_duty_cycle){
 	if(rxd_duty_cycle <= 100){
 		unsigned int duty_period = rxd_duty_cycle * period/100;
 		if(file_write(duty_cycle_path ,duty_period))
